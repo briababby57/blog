@@ -100,12 +100,12 @@ from email.message import EmailMessage
 import calendar
 from datetime import datetime
 
-today = datetime.today()
+today = datetime.now()
 
 
 def sendBirthdayWishes(name, email, day, month, year):
     message = EmailMessage()
-    message["subject"] = f"Happy Birthday message from David! 🎂🎊"
+    message["subject"] = "Happy Birthday message from David! 🎂🎊"
     message["from"] = "<your_email@gmail.com>"
     message["to"] = email
 
@@ -132,7 +132,7 @@ friends = [{"name": "David Cleff", "email": "useremail@gmail.com", "day": 29, "m
             "day": 29, "month": 6, "year": 1997},
            {"name": "Julliet Gin", "email": "useremail@gmail.com", "day": 29, "month": 6, "year": 1997}]
 
-today = datetime.today()
+today = datetime.now()
 
 for friend in friends:
     if today.month == friend["month"] and today.day == friend["day"]:
